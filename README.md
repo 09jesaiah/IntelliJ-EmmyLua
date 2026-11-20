@@ -1,18 +1,7 @@
 ![logo](/snapshot/logo.png)
 # EmmyLua for IntelliJ IDEA
 
-[![Build status](https://github.com/EmmyLua/IntelliJ-EmmyLua/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/EmmyLua/IntelliJ-EmmyLua/actions/workflows/build.yml)
-[![Online EmmyLua Doc](https://img.shields.io/badge/emmy-doc-46BC99.svg?style=flat-square)](https://emmylua.github.io)
-[![在线文档](https://img.shields.io/badge/emmy-中文-46BC99.svg?style=flat-square)](https://emmylua.github.io/zh_CN)
-[![Jetbrains plugin](https://img.shields.io/jetbrains/plugin/d/9768-emmylua.svg?style=flat-square)](https://plugins.jetbrains.com/plugin/9768-emmylua)
-[![Jetbrains plugin](https://img.shields.io/jetbrains/plugin/v/9768-emmylua.svg?style=flat-square)](https://plugins.jetbrains.com/plugin/9768-emmylua)
-[![donate](https://img.shields.io/badge/donate-emmy-FF69B4.svg?style=flat-square)](https://emmylua.github.io/donate.html)
-[![Join the chat at gitter](https://img.shields.io/badge/chat-on%20gitter-46BC99.svg?style=flat-square)](https://gitter.im/emmylua/Lobby?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
-[![加入QQ群](https://img.shields.io/badge/chat-QQ(1)群-46BC99.svg?style=flat-square)](https://jq.qq.com/?_wv=1027&k=5Br83i5)
-[![加入QQ群](https://img.shields.io/badge/chat-QQ(2)群-46BC99.svg?style=flat-square)](https://jq.qq.com/?_wv=1027&k=5EeI0Sm)
-
-QQ交流群：1群：`29850775` 2群：`529914962`
-(最新版本以及部分视频演示在群文件中下载)
+Support for Lua programming language in IntelliJ IDEA.
 
 ![snapshot](/snapshot/overview.gif)
 

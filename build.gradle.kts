@@ -74,11 +74,11 @@ if (isCI) {
     version = System.getenv("CI_BUILD_VERSION")
     exec {
         executable = "git"
-        args("config", "--global", "user.email", "love.tangzx@qq.com")
+        args("config", "--global", "user.email", "lv.jian_3411@hellogroup.com")
     }
     exec {
         executable = "git"
-        args("config", "--global", "user.name", "tangzx")
+        args("config", "--global", "user.name", "Hello Group")
     }
 }
 
