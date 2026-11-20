@@ -46,10 +46,10 @@ data class BuildData(
 
 val buildDataList = listOf(
     BuildData(
-        ideaSDKShortVersion = "2026.2",
-        ideaSDKVersion = "2026.2",
+        ideaSDKShortVersion = "2026.3",
+        ideaSDKVersion = "2026.3",
         sinceBuild = "253",
-        untilBuild = "262.*",
+        untilBuild = "263.*",
         bunch = "212",
         targetCompatibilityLevel = JavaVersion.VERSION_21,
         buildJdkVersion = JavaVersion.VERSION_25,
@@ -167,8 +167,15 @@ project(":") {
         implementation("org.luaj:luaj-jse:3.0.1")
         implementation("com.jgoodies:forms:1.2.1")
         intellijPlatform {
-            intellijIdeaUltimate(buildVersionData.ideaSDKVersion)
+            if (file("/Applications/IntelliJ IDEA.app").exists()) {
+                local("/Applications/IntelliJ IDEA.app")
+            } else {
+                intellijIdeaUltimate(buildVersionData.ideaSDKVersion)
+            }
             bundledModule("intellij.spellchecker")
+            bundledModule("intellij.platform.debugger")
+            bundledModule("intellij.platform.debugger.impl")
+            bundledModule("intellij.platform.debugger.impl.shared")
         }
     }
 
@@ -191,6 +198,7 @@ project(":") {
 
     intellijPlatform {
         version = version
+        buildSearchableOptions = false
         sandboxContainer.set(layout.buildDirectory.dir("${buildVersionData.ideaSDKShortVersion}/idea-sandbox"))
     }
 
@@ -244,6 +252,10 @@ project(":") {
                 languageVersion.set(JavaLanguageVersion.of(buildVersionData.buildJdkVersion.majorVersion.toInt()))
             })
             options.release.set(buildVersionData.targetCompatibilityLevel.majorVersion.toInt())
+        }
+
+        buildSearchableOptions {
+            enabled = false
         }
 
         patchPluginXml {
